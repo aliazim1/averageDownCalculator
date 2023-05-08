@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Average Down Calculator</title>
+    <style>
+        .spinner {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(255, 255, 255);
+          transition: opacity 0.75, visibality 0.75;
+        }
+        .spinner-hidden {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .spinner::after {
+          content: "";
+          width: 20px;
+          height: 20px;
+          border: 3px solid rgb(118, 118, 118);
+          border-top: 3px transparent solid;
+          border-radius: 50%;
+          animation: spin 0.9s liner infinite;
+          -webkit-animation: spin 0.9s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="spinner"></div>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+* {
+    color: #000000;
+    font-size: 3vmin;
+    font-family:'Poppins';
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #ebebeb;
+}
+
+/* nav bar styling */
+.navbar {
+    position:relative;
+    display: flex;
+    height: 5vh;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0fcb0f;
+}
+.navbar .logo {
+    margin-left: 2rem;
+}
+.navbar .logo .logo-txt {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    transition: 0.2s ease;
+    font-family: cursive;
+}
+ul {
+    display: inline-flex;
+    margin-right: 2rem;
+}
+li {
+    font-weight: 600;
+    color: #ffffff;
+    margin: 1rem;
+    font-size: 2.7vmin;
+    list-style: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+li:hover, .navbar .logo .logo-txt:hover {
+    color: #666666;
+}
+.welcome {
+    margin-top: 3rem;
+    align-items: center;
+    text-align: center;
+}
+.welcome h1 {
+    color: #16294e;
+    margin: 1rem auto;
+    font-size: 2rem;
+}
+
+/* main body styling  */
+.container1, .container2 {
+    background-color: #7caee1;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 50px auto;
+    width: 28rem;
+    align-items: center;
+    text-align: center;
+}
+.container2 {
+    display: none;
+}
+hr {
+    width: 40%;
+}
+span {
+    color: #0fa10f;
+    font-size: 2rem;
+    font-family: cursive;
+}
+.calc-title {
+    font-size: 2rem;
+    margin: 1rem auto;
+    margin-bottom: 0;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: all 5000s ease-in-out 0s;
+}
+
+.sec {
+    display: block;
+}
+.row {
+    margin: 1rem auto;  
+    display: block;
+}
+
+.col {
+    width: 90%;
+    margin: 0rem auto; 
+}
+.inputBox {
+    position: relative;
+}
+.data {
+    width: 15rem;
+    margin: 0.5rem auto;
+    padding-left: 0.3rem;
+    border: 1px solid #263042;
+    background-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.5s ease;
+}
+
+.col label {
+    position: absolute;
+    left: 5.15rem;
+    font-size: 0.9rem;
+    top: 0.6rem;
+    background-color: #7caee1;
+    transition: 0.2s;
+    pointer-events: none;
+
+}
+.inputBox input:valid ~ label, .inputBox input:focus ~ label {
+    top: -0.5rem;
+    left: 5.1rem;
+    padding-left: 0.09rem;
+    padding-right: 0.2rem;
+}
+#last-sec {
+    bottom: 29rem;
+}
+/* btns styling */
+.calc {
+    color: #f0f0f0;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    margin-top: 3px auto;
+    width: 20%;
+    border-style: none;
+    width: 6rem;
+    transition: 0.2s ease-in-out;
+}
+.cal1 {
+    background-color: #0fa10f;
+}
+.clr {
+    background-color: #c20c0c;
+}
+.cal1:hover {
+    background-color: #47ae47;
+}
+.clr:hover {
+    background-color: #a54848;
+}
+
+#btns {
+    width: 13rem;
+    margin-top: 1rem;
+    display: inline-flex;
+}
+.each-btn {
+    margin: 0 auto ;
+}
+
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-bar {
+        width: 100%;
+        margin: 0px 0px;
+    }
+    .nav-bar ul {
+        width: 100%;
+        border: none;
+    }
+    .nav-links li {
+        margin: 13px auto;
+    }
+    .container {
+        width: 90%;
+        border: none;
+        margin-top: 30%;
+    }
+  }
+
+/*  ==========================================================================================
+                                        loader styling
+    ========================================================================================== */
+
+
+.loader {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  background-color: rgb(249, 252, 255);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  border: 3px solid #131212;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: spin 0.75 linear infinite;
+  animation: spin 0.75s linear infinite;
+
+}
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+/* for safari */
+@-webkit-keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
