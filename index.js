@@ -20,6 +20,8 @@ function calculate() {
     var total_share = share1 + share2;
     var new_costs = total_amount / total_share;
     var new_cost = new_costs.toFixed(2);
+    total_amount = total_amount.toFixed(2);
+    total_share = total_share.toFixed(2);
     if (document.getElementById("share1").value == "") {
         return;
     }
@@ -27,14 +29,14 @@ function calculate() {
         if (disp_shares.value != "" && disp_avg.value != "") {
             disp_shares.empty();
             disp_avg.empty();
-            disp_shares.text(total_share);
-            disp_amount.text("$" + total_amount);
-            disp_avg.text("$" + new_cost);
+            disp_shares.text("Total Shares: " + total_share);
+            disp_amount.text("Total Amount: " + "$" + total_amount);
+            disp_avg.text("Average Cost: " + "$" + new_cost);
         }
         if (disp_shares.value == "" && disp_avg.value != "") {
-            disp_shares.text(total_share);
-            disp_amount.text("$" + total_amount);
-            disp_avg.text("$" + new_cost);
+            disp_shares.text("Total Shares: " + total_share);
+            disp_amount.text("Total Shares: " + "$" + total_amount);
+            disp_avg.text("Average Cost: " + "$" + new_cost);
         }
     }
 };
@@ -63,7 +65,7 @@ function calc() {
         return;
     }
     else {
-        shares.innerHTML = total_sh;
+        shares.innerHTML = "Total shares: " + total_sh;
     }
 };
 
@@ -79,8 +81,10 @@ function rmvAll() {
 function mainVisible() {
     document.getElementById('container1').style.display = "block";
     document.getElementById('container2').style.display = "none";
+    document.getElementById('wlcm').innerHTML = "Welcome to <span>ADC</span>";
 }
 function calcVisible() {
     document.getElementById('container1').style.display = "none";
     document.getElementById('container2').style.display = "block";
+    document.getElementById('wlcm').innerHTML = "";
 }

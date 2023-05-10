@@ -2,9 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
     <title>Stock Average Down Calculator</title>
     <script src="index.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -13,7 +17,7 @@
     <!-- nav bar section -->
     <nav class="navbar">
       <div class="logo">
-        <a href="#" class="logo-txt">ADC</a>
+        <a href="/index.html" class="logo-txt">ADC</a>
       </div>
       <div>
         <ul>
@@ -25,7 +29,7 @@
 
     <!-- first section -->
     <div class="welcome">
-      <h1>Welcome to <span>ADC</span></h1>
+      <h1 id="wlcm">Welcome to <span>ADC</span></h1>
     </div>
 
     <!-- CALCULATOR SECTION -->
@@ -35,26 +39,26 @@
         <div class="row">
           <div class="col">
             <div class="inputBox">
-              <input class="data" id="share1" type="number" placeholder="0000" required>
+              <input class="data" id="share1" type="float" placeholder="0000" required>
             <label>Previous Shares</label>
             </div>
           </div>
           <div class="col">
             <div class="inputBox">
-              <input class="data" id="cost1" type="number" placeholder="0000" required>
+              <input class="data" id="cost1" type="float" placeholder="0000" required>
               <label>Price Per Share </label>
             </div>
           </div>
           
           <div class="col">
             <div class="inputBox">
-              <input class="data" id="share2" type="number" placeholder="0000" required>
+              <input class="data" id="share2" type="float" placeholder="0000" required>
             <label>New shares</label>
             </div>
           </div>
           <div class="col">
             <div class="inputBox">
-              <input class="data" id="cost2" type="number" placeholder="0000" required>
+              <input class="data" id="cost2" type="float" placeholder="0000" required>
               <label>Price Per Share </label>
             </div>
           </div>
@@ -71,28 +75,16 @@
           </div>
         </div>
       </div>
-
+      
       <div class="calculated row">
-        <div class="flexRow">
-          <label class="col" >Total Amount: </label>
-          <label class="inpts total_cost" id="total_amount" ></label>
-        </div>
+        <P id="total_amount"></P>
       </div>
-
       <div class="calculated row">
-        <div class="flexRow">
-          <label class="col" >Total Shares: </label>
-          <label class="inpts total_cost" id="total_share" ></label>
-        </div>
+        <P id="total_share"></P>
       </div>
-
       <div class="calculated row">
-        <div class="flexRow">
-          <label  class="col" >Average Cost: </label>
-          <label class="inpts total_cost" id="avg_cost" ></label>
-        </div>
+          <P id="avg_cost"></P>
       </div>
-
     </div>
 
     <!-- CALCULATOR SECTION -->
@@ -102,14 +94,14 @@
         <div class="row">
           <div class="col">
             <div class="inputBox">
-              <input class="data" id="amount" type="number" placeholder="0000" required>
+              <input class="data" id="amount" type="float" placeholder="0000" required>
             <label>Share Amount</label>
             </div>
           </div>
 
           <div class="col">
             <div class="inputBox">
-              <input class="data" id="price" type="number" placeholder="0000" required>
+              <input class="data" id="price" type="float" placeholder="0000" required>
               <label>Price Per Share </label>
             </div>
           </div>
@@ -127,11 +119,16 @@
       </div>
 
       <div class="row">
-        <div class="flexRow">
-          <label class="col" >Total shares: </label>
-          <label class="inpts total_cost" id="shares" ></label>
-        </div>
+        <p id="shares"></p>
       </div>
     </div>
+
+    <!-- footer section design -->
+    <footer class="footer">
+      <div class="social-media">
+        <a href="https://github.com/aliazim1" target="_blank"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/ali-azimi-977a74275/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </footer>
   </body>
 </html>

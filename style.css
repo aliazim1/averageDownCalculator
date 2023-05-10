@@ -1,19 +1,23 @@
 * {
-    color: #000000;
+    margin: 0;
+    padding: 0;
+    color: #16294e;
     font-size: 3vmin;
     font-family:'Poppins';
+    box-sizing: border-box;
+    outline: none;
+    scroll-snap-align: smooth;
 }
 body {
-    margin: 0px;
-    padding: 0px;
     background-color: #ebebeb;
+    position: relative;
 }
 
 /* nav bar styling */
 .navbar {
     position:relative;
     display: flex;
-    height: 5vh;
+    height: 8vh;
     align-items: center;
     text-align: center;
     justify-content: space-between;
@@ -53,7 +57,7 @@ li:hover, .navbar .logo .logo-txt:hover {
     text-align: center;
 }
 .welcome h1 {
-    color: #16294e;
+    /* color: #16294e; */
     margin: 1rem auto;
     font-size: 2rem;
 }
@@ -64,6 +68,7 @@ li:hover, .navbar .logo .logo-txt:hover {
     border-radius: 5px;
     padding: 5px;
     margin: 50px auto;
+    margin-bottom: 5rem;
     width: 28rem;
     align-items: center;
     text-align: center;
@@ -72,7 +77,8 @@ li:hover, .navbar .logo .logo-txt:hover {
     display: none;
 }
 hr {
-    width: 40%;
+    width: 50%;
+    margin: 0 auto;
 }
 span {
     color: #0fa10f;
@@ -174,24 +180,43 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-@media only screen and (max-width: 480px) {
-    .nav-bar {
-        width: 100%;
-        margin: 0px 0px;
-    }
-    .nav-bar ul {
-        width: 100%;
-        border: none;
-    }
-    .nav-links li {
-        margin: 13px auto;
-    }
-    .container {
-        width: 90%;
-        border: none;
-        margin-top: 30%;
-    }
-  }
+/* ========== footer section styling ========= */
+.footer {
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: #16294e;
+}
+
+
+.footer .social-media {
+    width: 12rem;
+    margin: 0 auto;
+    display: flex;
+    display: inline-flex;
+    justify-content: center;
+}
+footer .social-media a .bx {
+    color: #ebebeb;
+}
+footer .social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin:33px 5px;
+    text-decoration: none;
+    background: transparent;
+    border: .1rem solid #a3a3a3;
+    transition: width 0.5s, height 0.5s, transform 0.5s ease;
+}
+
+footer .social-media a:hover {
+    background-color: #00abf0;
+    transform: scale(1.05);
+}
 
 /*  ==========================================================================================
                                         loader styling
@@ -238,3 +263,53 @@ input::-webkit-inner-spin-button {
   to {transform: rotate(360deg);}
 }
 
+/* ==========Responsive styling========= */
+  
+@media (max-width: 1200px) {
+    .footer {
+    }
+}
+
+@media (max-width: 1024px) {
+    .container1, .container2{
+        margin-bottom: 7rem;
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 952px) {
+    .footer {
+    }
+}
+
+@media (max-width: 840px) {
+    .container1{
+        margin-bottom: 9rem;
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container1, .container2{
+        margin-bottom: 12rem;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
+/* -----------for cell phones----------- */
+@media only screen and (max-width: 480px) {
+    .footer {
+        position: fixed;
+        bottom: 0;
+    }
+  }
