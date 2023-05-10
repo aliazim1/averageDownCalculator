@@ -1,6 +1,20 @@
+// show/hide each calculator
+function mainVisible() {
+    document.getElementById('container1').style.display = "block";
+    document.getElementById('container2').style.display = "none";
+    document.getElementById('wlcm').innerHTML = "Welcome to <span>ADC</span>";
+}
+function calcVisible() {
+    document.getElementById('container1').style.display = "none";
+    document.getElementById('container2').style.display = "block";
+    document.getElementById('wlcm').innerHTML = "";
+}
+
+
+
 // Average down the stock 
 function calculate() {
-    // get all the into from user input
+    // // get all the into from user input
     var share1 = parseFloat($('#share1').val());
     var cost1 = parseFloat($('#cost1').val());
     var share2 = parseFloat($('#share2').val());
@@ -21,23 +35,28 @@ function calculate() {
     var new_costs = total_amount / total_share;
     var new_cost = new_costs.toFixed(2);
     total_amount = total_amount.toFixed(2);
-    total_share = total_share.toFixed(2);
-    if (document.getElementById("share1").value == "") {
+    // total_share = 9;
+    // total_share = total_share.toFixed(2);
+
+    // validate the user input
+    if (document.getElementById("share1").value == "" ||
+    document.getElementById("cost1").value == "" ||
+    document.getElementById("share2").value == "" ||
+    document.getElementById("cost2").value == "") {
         return;
     }
+    if (document.getElementById("share1").value > 0 &&
+    document.getElementById("cost1").value > 0 &&
+    document.getElementById("share2").value > 0 &&
+    document.getElementById("cost2").value > 0 ) {
+        disp_shares.empty();
+        disp_avg.empty();
+        disp_shares.text("Total Shares: " + total_share);
+        disp_amount.text("Total Amount: " + "$" + total_amount);
+        disp_avg.text("Average Cost: " + "$" + new_cost);
+    }
     else {
-        if (disp_shares.value != "" && disp_avg.value != "") {
-            disp_shares.empty();
-            disp_avg.empty();
-            disp_shares.text("Total Shares: " + total_share);
-            disp_amount.text("Total Amount: " + "$" + total_amount);
-            disp_avg.text("Average Cost: " + "$" + new_cost);
-        }
-        if (disp_shares.value == "" && disp_avg.value != "") {
-            disp_shares.text("Total Shares: " + total_share);
-            disp_amount.text("Total Shares: " + "$" + total_amount);
-            disp_avg.text("Average Cost: " + "$" + new_cost);
-        }
+        return;
     }
 };
 
@@ -64,8 +83,11 @@ function divid() {
     if (document.getElementById("amount").value == "" ) {
         return;
     }
-    else {
+    if (document.getElementById("amount").value > 0 ) {
         shares.innerHTML = "Total Shares: " + total_sh;
+    }
+    else {
+        return;
     }
 };
 
@@ -86,11 +108,15 @@ function multp() {
     var total_amount = nShares * avPrice;
     var total = total_amount.toFixed(2);
 
-    if (document.getElementById("nshares").value == "" ) {
+    if (document.getElementById("nshares").value == "") {
         return;
     }
-    else {
+    if ( document.getElementById("nshares").value > 0) {
         showTotal.innerHTML = "Total Amount : " + "$" + total;
+        // return;
+    }
+    else {
+        return;
     }
 };
 
@@ -100,16 +126,3 @@ function clrvAll() {
     document.getElementById("avprice").value = "";
     $("#showTotal").empty();
 };
-
-
-// show/hide each calculator
-function mainVisible() {
-    document.getElementById('container1').style.display = "block";
-    document.getElementById('container2').style.display = "none";
-    document.getElementById('wlcm').innerHTML = "Welcome to <span>ADC</span>";
-}
-function calcVisible() {
-    document.getElementById('container1').style.display = "none";
-    document.getElementById('container2').style.display = "block";
-    document.getElementById('wlcm').innerHTML = "";
-}

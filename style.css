@@ -1,7 +1,18 @@
+:root {
+    --div-bg: #16294e;
+    --body-bg-clr: #ebebeb;
+    --nav-clr: #0fcb0f;
+    --success: #0fa10f;
+    --danger: #c20c0c;
+    --success-hover: #47ae47;
+    --danger-hover:  #a54848;
+    --hover-clr: #666666;
+}
+
 * {
     margin: 0;
     padding: 0;
-    color: #16294e;
+    color: var(--body-bg-clr);
     font-size: 3vmin;
     font-family:'Poppins';
     box-sizing: border-box;
@@ -9,7 +20,7 @@
     scroll-snap-align: smooth;
 }
 body {
-    background-color: #ebebeb;
+    background-color: var(--body-bg-clr);
     position: relative;
 }
 
@@ -23,7 +34,7 @@ body {
     justify-content: space-between;
     width: 100%;
     padding: 0.8rem;
-    background-color: #0fcb0f;
+    background-color: var(--nav-clr);
 }
 .navbar .logo {
     margin-left: 2rem;
@@ -31,7 +42,7 @@ body {
 .navbar .logo .logo-txt {
     text-decoration: none;
     font-weight: bold;
-    color: #ffffff;
+    color: var(--body-bg-clr);
     transition: 0.2s ease;
     font-family: cursive;
 }
@@ -41,7 +52,7 @@ ul {
 }
 li {
     font-weight: 600;
-    color: #ffffff;
+    color: var(--body-bg-clr);
     margin: 1rem;
     font-size: 2.7vmin;
     list-style: none;
@@ -49,7 +60,7 @@ li {
     transition: 0.2s ease;
 }
 li:hover, .navbar .logo .logo-txt:hover {
-    color: #666666;
+    color: var(--hover-clr);
 }
 .welcome {
     margin-top: 3rem;
@@ -57,14 +68,14 @@ li:hover, .navbar .logo .logo-txt:hover {
     text-align: center;
 }
 .welcome h1 {
-    /* color: #16294e; */
+    color: var(--div-bg);
     margin: 1rem auto;
     font-size: 2rem;
 }
 
 /* main body styling  */
 .container1, .container2 {
-    background-color: #7caee1;
+    background-color: var(--div-bg);
     border-radius: 5px;
     padding: 5px;
     margin: 50px auto;
@@ -81,7 +92,7 @@ hr {
     margin: 0 auto;
 }
 span {
-    color: #0fa10f;
+    color: var(--nav-clr);
     font-size: 2rem;
     font-family: cursive;
 }
@@ -115,8 +126,8 @@ input:-webkit-autofill:active {
 .data {
     width: 15rem;
     margin: 0.5rem auto;
-    padding-left: 0.3rem;
-    border: 1px solid #263042;
+    padding-left: 0.5rem;
+    border: 1px solid var(--body-bg-clr);
     background-color: transparent;
     border-radius: 5px;
     outline: none;
@@ -128,7 +139,7 @@ input:-webkit-autofill:active {
     left: 5.15rem;
     font-size: 0.9rem;
     top: 0.6rem;
-    background-color: #7caee1;
+    background-color: var(--div-bg);
     transition: 0.2s;
     pointer-events: none;
 
@@ -142,9 +153,9 @@ input:-webkit-autofill:active {
 #last-sec {
     bottom: 29rem;
 }
+
 /* btns styling */
 .calc {
-    color: #f0f0f0;
     font-size: 0.9rem;
     border-radius: 5px;
     margin-top: 3px auto;
@@ -154,16 +165,16 @@ input:-webkit-autofill:active {
     transition: 0.2s ease-in-out;
 }
 .cal1 {
-    background-color: #0fa10f;
+    background-color: var(--success);
 }
 .clr {
-    background-color: #c20c0c;
+    background-color: var(--danger)
 }
 .cal1:hover {
-    background-color: #47ae47;
+    background-color: var(--success-hover);
 }
 .clr:hover {
-    background-color: #a54848;
+    background-color: var(--danger-hover);
 }
 
 #btns {
@@ -186,7 +197,7 @@ input::-webkit-inner-spin-button {
     width: 100%;
     bottom: 0;
     text-align: center;
-    background-color: #16294e;
+    background-color: var(--div-bg);
 }
 
 
@@ -198,7 +209,7 @@ input::-webkit-inner-spin-button {
     justify-content: center;
 }
 footer .social-media a .bx {
-    color: #ebebeb;
+    color: var(--body-bg-clr)
 }
 footer .social-media a {
     display: inline-flex;
@@ -210,12 +221,12 @@ footer .social-media a {
     margin:33px 5px;
     text-decoration: none;
     background: transparent;
-    border: .1rem solid #a3a3a3;
+    border: .1rem solid var(--body-bg-clr);
     transition: width 0.5s, height 0.5s, transform 0.5s ease;
 }
 
 footer .social-media a:hover {
-    background-color: #00abf0;
+    background-color: var(--hover-clr);
     transform: scale(1.05);
 }
 
@@ -231,7 +242,7 @@ footer .social-media a:hover {
   height: 100vh;
   display: flex;
   position: fixed;
-  background-color: rgb(249, 252, 255);
+  background-color: var(--body-bg-clr);
   justify-content: center;
   align-items: center;
   transition: opacity 0.75s, visibility 0.75s;
