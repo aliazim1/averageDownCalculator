@@ -75,6 +75,7 @@ li:hover, .navbar .logo .logo-txt:hover {
 }
 .container2 {
     display: none;
+    margin: 5rem auto;
 }
 hr {
     width: 50%;
