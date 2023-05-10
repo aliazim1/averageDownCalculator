@@ -40,7 +40,7 @@
           <div class="col">
             <div class="inputBox">
               <input class="data" id="share1" type="float" placeholder="0000" required>
-            <label>Previous Shares</label>
+            <label>Previously Owned Shares</label>
             </div>
           </div>
           <div class="col">
@@ -53,7 +53,7 @@
           <div class="col">
             <div class="inputBox">
               <input class="data" id="share2" type="float" placeholder="0000" required>
-            <label>New shares</label>
+            <label>New Purchased shares</label>
             </div>
           </div>
           <div class="col">
@@ -67,11 +67,11 @@
         <hr>
         <div class="row" id="btns">
           <div class="each-btn">
-            <button id="btn" onclick="calculate()" class="calc cal1">Calculate </button>
+            <button onclick="calculate()" class="calc cal1">Calculate </button>
           </div>
   
           <div class="each-btn">
-            <button id="btn" onclick="removeAll()" class="calc clr">Clear </button>
+            <button onclick="removeAll()" class="calc clr">Clear </button>
           </div>
         </div>
       </div>
@@ -90,36 +90,73 @@
     <!-- CALCULATOR SECTION -->
     <div class="container2" id="container2">
       <h1 class="calc-title">Calculator</h1>
-      <div class="sec">
-        <div class="row">
-          <div class="col">
-            <div class="inputBox">
-              <input class="data" id="amount" type="float" placeholder="0000" required>
-            <label>Share Amount</label>
+      <div>
+        <div class="first">
+          <div class="sec">
+            <div class="row">
+              <div class="col">
+                <div class="inputBox">
+                  <input class="data" id="amount" type="float" placeholder="0000" required>
+                <label>Amount $</label>
+                </div>
+              </div>
+    
+              <div class="col">
+                <div class="inputBox">
+                  <input class="data" id="price" type="float" placeholder="0000" required>
+                  <label>Price Per Share </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" id="btns">
+              <div class="each-btn">
+                <button id="btn" onclick="divid()" class="calc cal1">÷</button>
+              </div>
+      
+              <div class="each-btn">
+                <button id="btn" onclick="rmvAll()" class="calc clr">c</button>
+              </div>
             </div>
           </div>
-
-          <div class="col">
-            <div class="inputBox">
-              <input class="data" id="price" type="float" placeholder="0000" required>
-              <label>Price Per Share </label>
-            </div>
+    
+          <div class="row">
+            <p id="shares"></p>
           </div>
         </div>
         <hr>
-        <div class="row" id="btns">
-          <div class="each-btn">
-            <button id="btn" onclick="calc()" class="calc cal1">Calculate </button>
+        <div class="sec">
+          <div class="sec">
+            <div class="row">
+              <div class="col">
+                <div class="inputBox">
+                  <input class="data" id="nshares" type="float" placeholder="0000" required>
+                <label>Number of Share</label>
+                </div>
+              </div>
+    
+              <div class="col">
+                <div class="inputBox">
+                  <input class="data" id="avprice" type="float" placeholder="0000" required>
+                  <label>Price Per Share </label>
+                </div>
+              </div>
+            </div>
+            <div class="row" id="btns">
+              <div class="each-btn">
+                <button id="btn" onclick="multp()" class="calc cal1">x</button>
+              </div>
+      
+              <div class="each-btn">
+                <button id="btn" onclick="clrvAll()" class="calc clr">c</button>
+              </div>
+            </div>
           </div>
-  
-          <div class="each-btn">
-            <button id="btn" onclick="rmvAll()" class="calc clr">Clear </button>
+    
+          <div class="row">
+            <p id="showTotal"></p>
           </div>
         </div>
-      </div>
-
-      <div class="row">
-        <p id="shares"></p>
       </div>
     </div>
 

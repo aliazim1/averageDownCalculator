@@ -52,8 +52,8 @@ function removeAll() {
     $("#avg_cost").empty(); 
 };
 
-
-function calc() {
+// divide amount per share
+function divid() {
     var amount = parseFloat($('#amount').val());
     var price = parseFloat($('#price').val());
     var shares = document.getElementById("shares");
@@ -65,7 +65,7 @@ function calc() {
         return;
     }
     else {
-        shares.innerHTML = "Total shares: " + total_sh;
+        shares.innerHTML = "Total Shares: " + total_sh;
     }
 };
 
@@ -74,6 +74,31 @@ function rmvAll() {
     document.getElementById("amount").value = "";
     document.getElementById("price").value = "";
     $("#shares").empty();
+};
+
+
+// multiply share by average price
+function multp() {
+    var nShares = parseFloat($('#nshares').val());
+    var avPrice = parseFloat($('#avprice').val());
+    var showTotal = document.getElementById("showTotal");
+
+    var total_amount = nShares * avPrice;
+    var total = total_amount.toFixed(2);
+
+    if (document.getElementById("nshares").value == "" ) {
+        return;
+    }
+    else {
+        showTotal.innerHTML = "Total Amount : " + "$" + total;
+    }
+};
+
+
+function clrvAll() {
+    document.getElementById("nshares").value = "";
+    document.getElementById("avprice").value = "";
+    $("#showTotal").empty();
 };
 
 
