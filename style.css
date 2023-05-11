@@ -20,6 +20,7 @@
     scroll-snap-align: smooth;
 }
 body {
+    height: 100vh;
     background-color: var(--body-bg-clr);
     position: relative;
 }
@@ -44,7 +45,6 @@ body {
     font-weight: bold;
     color: var(--body-bg-clr);
     transition: 0.2s ease;
-    font-family: cursive;
 }
 ul {
     display: inline-flex;
@@ -94,7 +94,6 @@ hr {
 span {
     color: var(--nav-clr);
     font-size: 2rem;
-    font-family: cursive;
 }
 .calc-title {
     font-size: 2rem;
@@ -125,7 +124,7 @@ input:-webkit-autofill:active {
 }
 .data {
     width: 15rem;
-    margin: 0.5rem auto;
+    margin: 0.6rem auto;
     padding-left: 0.5rem;
     border: 1px solid var(--body-bg-clr);
     background-color: transparent;
@@ -137,15 +136,16 @@ input:-webkit-autofill:active {
 .col label {
     position: absolute;
     left: 5.15rem;
-    font-size: 0.9rem;
-    top: 0.6rem;
+    font-size: 0.7rem;
+    top: 0.9rem;
+    height: 0.9rem;
     background-color: var(--div-bg);
     transition: 0.2s;
     pointer-events: none;
 
 }
 .inputBox input:valid ~ label, .inputBox input:focus ~ label {
-    top: -0.5rem;
+    top: -0.25rem;
     left: 5.1rem;
     padding-left: 0.09rem;
     padding-right: 0.2rem;
