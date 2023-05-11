@@ -20,7 +20,10 @@
     scroll-snap-align: smooth;
 }
 body {
-    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: var(--body-bg-clr);
     position: relative;
 }
@@ -274,54 +277,3 @@ footer .social-media a:hover {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
 }
-
-/* ==========Responsive styling========= */
-  
-@media (max-width: 1200px) {
-    .footer {
-    }
-}
-
-@media (max-width: 1024px) {
-    .container1, .container2{
-        margin-bottom: 7rem;
-    }
-    .footer {
-        position: fixed;
-        bottom: 0;
-    }
-}
-
-@media (max-width: 952px) {
-    .footer {
-    }
-}
-
-@media (max-width: 840px) {
-    .container1{
-        margin-bottom: 9rem;
-    }
-    .footer {
-        position: fixed;
-        bottom: 0;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .container1, .container2{
-        margin-bottom: 12rem;
-    }
-
-    .footer {
-        position: fixed;
-        bottom: 0;
-    }
-}
-/* -----------for cell phones----------- */
-@media only screen and (max-width: 480px) {
-    .footer {
-        position: fixed;
-        bottom: 0;
-    }
-  }
