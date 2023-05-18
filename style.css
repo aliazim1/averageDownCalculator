@@ -38,7 +38,7 @@ body {
     justify-content: space-between;
     width: 100%;
     padding: 0.8rem;
-    background-color: var(--nav-clr);
+    background-color: var(--div-bg);
 }
 .navbar .logo {
     margin-left: 2rem;
@@ -79,7 +79,7 @@ li:hover, .navbar .logo .logo-txt:hover {
 /* main body styling  */
 .container1, .container2 {
     background-color: var(--div-bg);
-    border-radius: 5px;
+    border-radius: 7px;
     padding: 5px;
     margin: 50px auto;
     margin-bottom: 5rem;
@@ -95,7 +95,7 @@ hr {
     margin: 0 auto;
 }
 span {
-    color: var(--nav-clr);
+    color: var(--success);
     font-size: 2rem;
 }
 .calc-title {
